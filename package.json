@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "jss": "^9.8.7",
-    "jss-preset-default": "^3.0.0",
+    "jss-preset-default": "^4.5.0",
     "murmurhash-js": "^1.0.0"
   },
   "lint-staged": {
