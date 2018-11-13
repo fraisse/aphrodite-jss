@@ -59,7 +59,7 @@
     "webpack": "^2.5.1"
   },
   "dependencies": {
-    "jss": "^8.1.0",
+    "jss": "^9.8.7",
     "jss-preset-default": "^3.0.0",
     "murmurhash-js": "^1.0.0"
   },
