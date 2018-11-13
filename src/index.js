@@ -1,11 +1,9 @@
-import {create} from 'jss'
+import {create, createGenerateClassName} from 'jss'
 import preset from 'jss-preset-default'
-import hash from 'murmurhash-js/murmurhash3_gc'
 
 const meta = 'aphrodite-jss'
 const isNotFalsy = val => !!val
 const getClassName = rule => rule.className
-const generateClassName = (name, str) => `${name}-${hash(name + str + meta)}`
 const mergeStyles = (style, rule) => ({...style, ...rule.style})
 
 export default function aphroditeJss(jss, options) {
@@ -39,7 +37,7 @@ export default function aphroditeJss(jss, options) {
         return map
       }
       map[name] = {
-        className: generateClassName(name, JSON.stringify(styles[name])),
+        className: createGenerateClassName(name, JSON.stringify(styles[name])),
         style: styles[name]
       }
       return map
